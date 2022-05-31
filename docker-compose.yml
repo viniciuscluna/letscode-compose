@@ -1,0 +1,99 @@
+version: '3'
+services:
+  service-discovery:
+    image: viniciuscluna/letscode-discovery
+    ports:
+      - "8761:8761"
+  service-gateway:
+    image: viniciuscluna/letscode-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-discovery
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka:
+    image: 'bitnami/kafka:latest'
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper      
+  course-sale:
+    image: viniciuscluna/letscode-venda
+    ports:
+      - "8082:8080"
+    environment:
+      - spring.profiles.active=prod
+    depends_on:
+      - course-sale-mongo
+      - service-discovery
+      - kafka
+  course-sale-mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=qwerty
+  product-catalog:
+    image: jmmoura/letscode-products
+    ports:
+      - "8083:8080"
+    depends_on:
+      - product-catalog-postgres
+  product-catalog-postgres:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=products
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  users-system:
+    image: sogolonmvj/users-system
+    container_name: users-system
+    ports:
+      - "8084:8084"
+    restart: always
+    links:
+      - users-system-postgres
+    depends_on:
+      - users-system-postgres
+  users-system-postgres:
+    image: postgres:10.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database-data:/data/db
+    environment:
+      - POSTGRES_DB=customer_registration
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=0wN3r
+  maildev:
+    image: maildev/maildev
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - MAILDEV_WEB_PORT=1080
+      - MAILDEV_SMTP_PORT=1025
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+    links:
+      - users-system
+    depends_on:
+      - users-system  
