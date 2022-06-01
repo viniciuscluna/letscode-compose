@@ -4,6 +4,12 @@ services:
     image: viniciuscluna/letscode-discovery
     ports:
       - "8761:8761"
+    depends_on:
+      - service-config
+  service-config:
+    image: 11645332403/config-server
+    ports:
+      - "8888:8888"
   service-gateway:
     image: viniciuscluna/letscode-gateway
     ports:
