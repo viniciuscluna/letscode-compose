@@ -7,7 +7,7 @@
  - *Customer* [Sogolonmvj/e-commerce-customer-microservice (github.com)](https://github.com/Sogolonmvj/e-commerce-customer-microservice)
  - *Discovery* [viniciuscluna/letscode-discovery (github.com)](https://github.com/viniciuscluna/letscode-discovery)
  - *Gateway* [viniciuscluna/letscode-gateway (github.com)](https://github.com/viniciuscluna/letscode-gateway)
- - *Config* [viniciuscluna/annysantos-dev/e-commerce-letscode (github.com)](https://github.com/annysantos-dev/e-commerce-letscode/tree/master/config-server/config-server)
+ - *Config* [annysantos-dev/e-commerce-letscode (github.com)](https://github.com/annysantos-dev/e-commerce-letscode/tree/master/config-server/config-server)
 
 ## **Participantes**
  - Sogolon Vieira <https://github.com/Sogolonmvj> 
