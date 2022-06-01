@@ -16,7 +16,7 @@
 
  ## **Arquitetura**
 
-
+![Arquitetura do projeto](https://raw.githubusercontent.com/viniciuscluna/letscode-compose/main/img/Arquitetura-ECommerce.jpg)
 
 ## **Tecnologias utilizadas**
  - Spring Web
