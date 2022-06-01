@@ -111,10 +111,6 @@ services:
       - "9090:9090"
     volumes:
       - ./Prometheus:/etc/prometheus
-    links:
-      - reader
-    depends_on:
-      - reader
   grafana:
     image: grafana/grafana
     ports:
