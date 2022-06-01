@@ -7,6 +7,7 @@
  - *Customer* [Sogolonmvj/e-commerce-customer-microservice (github.com)](https://github.com/Sogolonmvj/e-commerce-customer-microservice)
  - *Discovery* [viniciuscluna/letscode-discovery (github.com)](https://github.com/viniciuscluna/letscode-discovery)
  - *Gateway* [viniciuscluna/letscode-gateway (github.com)](https://github.com/viniciuscluna/letscode-gateway)
+ - *Config* [viniciuscluna/annysantos-dev/e-commerce-letscode (github.com)](https://github.com/annysantos-dev/e-commerce-letscode/tree/master/config-server/config-server)
 
 ## **Participantes**
  - Sogolon Vieira <https://github.com/Sogolonmvj> 
@@ -33,7 +34,7 @@
  -  Spring Security
  - Resilience4J
  - Api Gateway
- - 
+ - Api Config
 ## **Objetivo do Projeto**
 
 Uma aplicação para efetivar uma venda de curso. Para fins de aprendizagem trabalhamos com arquitetura de micro serviços nesse projeto juntamente com resiliência, mensageira e abordagem reativa. 
