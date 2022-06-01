@@ -2,11 +2,11 @@
 
 ## **Projetos envolvidos**
 
- *Sales* [viniciuscluna/letscode-venda (github.com)](https://github.com/viniciuscluna/letscode-venda)
- *Product Catalog* [jmmoura/letscode-product-catalog (github.com)](https://github.com/jmmoura/letscode-product-catalog)
- *Customer* [Sogolonmvj/e-commerce-customer-microservice (github.com)](https://github.com/Sogolonmvj/e-commerce-customer-microservice)
- *Discovery* [viniciuscluna/letscode-discovery (github.com)](https://github.com/viniciuscluna/letscode-discovery)
-*Gateway* [viniciuscluna/letscode-gateway (github.com)](https://github.com/viniciuscluna/letscode-gateway)
+ - *Sales* [viniciuscluna/letscode-venda (github.com)](https://github.com/viniciuscluna/letscode-venda)
+ - *Product Catalog* [jmmoura/letscode-product-catalog (github.com)](https://github.com/jmmoura/letscode-product-catalog)
+ - *Customer* [Sogolonmvj/e-commerce-customer-microservice (github.com)](https://github.com/Sogolonmvj/e-commerce-customer-microservice)
+ - *Discovery* [viniciuscluna/letscode-discovery (github.com)](https://github.com/viniciuscluna/letscode-discovery)
+ - *Gateway* [viniciuscluna/letscode-gateway (github.com)](https://github.com/viniciuscluna/letscode-gateway)
 
 ## **Participantes**
  - Sogolon Vieira <https://github.com/Sogolonmvj> 
