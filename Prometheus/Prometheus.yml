@@ -10,9 +10,9 @@ scrape_configs:
     scrape_interval: 5s
     metrics_path: /actuator/prometheus
     static_configs:
-      - targets: [ 'users-system:8084' ]
+      - targets: [ 'host.docker.internal:8084' ]
   - job_name: 'course-sale'
     scrape_interval: 5s
     metrics_path: /actuator/prometheus
     static_configs:
-      - targets: [ 'course-sale:8082' ]
+      - targets: [ 'host.docker.internal:8082' ]
