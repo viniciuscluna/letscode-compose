@@ -62,8 +62,10 @@ services:
   users-system:
     image: sogolonmvj/users-system
     container_name: users-system
+    environment:
+      - spring.profiles.active=prod    
     ports:
-      - "8084:8084"
+      - "8084:8080"
     restart: always
     links:
       - users-system-postgres
@@ -97,3 +99,24 @@ services:
       - users-system
     depends_on:
       - users-system  
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./Prometheus:/etc/prometheus
+    links:
+      - reader
+    depends_on:
+      - reader
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SERVER_PROTOCOL: http
+      GF_SERVER_HTTP: 3000
+    links:
+      - prometheus
+    depends_on:
+      - prometheus
