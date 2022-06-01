@@ -14,6 +14,10 @@
  - Joseanny Santos <https://github.com/annysantos-dev> 
  - Vinícius Luna <https://github.com/viniciuscluna>
 
+ ## **Arquitetura**
+
+
+
 ## **Tecnologias utilizadas**
  - Spring Web
  - Spring Webflux
