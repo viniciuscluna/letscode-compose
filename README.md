@@ -47,6 +47,12 @@ Com o terminal de sua preferência na raiz desse projeto, execute:
 
     docker-compose up
 
+## **Postman**
+
+Abaixo publicamos as rotas do sistema para ser executada via postman:
+
+`https://www.postman.com/lively-star-655599/workspace/letscode-e-commerce/collection/15179990-9423af79-d24c-4285-bd49-799763e24655?action=share&creator=15179990`
+
 ## **Como realizar uma venda**
 
 Primeiramente é necessário cadastrar um usuário no sistema, um token será gerado e é necessário confirmar o email
